@@ -1,0 +1,53 @@
+.menu-img{
+
+    width: 25px;
+    padding: 5px;
+    object-fit: contain;
+    transition: opacity 0.1s;    
+}
+
+#header{
+    background-color: black;
+    height: 35px;
+    width: 35px;
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    z-index: 100;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    width: 76%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s;
+}
+
+.active {
+    left: 0;
+}
+
+.unactive{
+    left: -100%;
+}
+.nav ul{
+    list-style: none;
+    text-align: center;
+}
+.nav ul li{
+    margin: 20px 0;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styling/menu.css" />
+    <link rel="stylesheet" href="styling/general.css" />
+    <link rel="stylesheet" href="styling/slideshow.css">
+  </head>
+  <body>
+    <header id="header"><img id="menu-img" class="menu-img" src="icons/menu.svg" alt=""></header>
+    <nav id="nav" class="nav unactive">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div>
+      <div class="slideshow">
+        <img src="Images/01.png" class="active" alt="">
+        <img src="Images/02.png" alt="">
+        <img src="Images/03.png" alt="">
+        <img src="Images/04.png" alt="">
+        <div class="controls">
+          <button onclick="prevSlide()">&lt;</button>
+          <button onclick="nextSlide()">&gt;</button>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
