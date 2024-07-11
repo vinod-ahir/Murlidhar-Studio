@@ -6,10 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="styling/menu.css" />
     <link rel="stylesheet" href="styling/general.css" />
-    <link rel="stylesheet" href="styling/slideshow.css">
+    <link rel="stylesheet" href="styling/slideshow.css" />
   </head>
   <body>
-    <header id="header"><img id="menu-img" class="menu-img" src="icons/menu.svg" alt=""></header>
+    <header id="header">
+      <img id="menu-img" class="menu-img" src="icons/menu.svg" alt="" />
+    </header>
     <nav id="nav" class="nav unactive">
       <ul>
         <li><a href="#home">Home</a></li>
@@ -20,13 +22,15 @@
     </nav>
     <div>
       <div class="slideshow">
-        <img src="Images/01.png" class="active" alt="">
-        <img src="Images/02.png" alt="">
-        <img src="Images/03.png" alt="">
-        <img src="Images/04.png" alt="">
+        <img src="Images/01.png" id="slideshowimg" alt="" />
+        <img src="Images/02.png" id="slideshowimg" alt="" />
+        <img src="Images/03.png" id="slideshowimg" alt="" />
+        <img src="Images/04.png" id="slideshowimg" alt="" />
         <div class="controls">
-          <button onclick="prevSlide()">&lt;</button>
-          <button onclick="nextSlide()">&gt;</button>
+          <div class="ctrlbtn"></div>
+          <div class="ctrlbtn"></div>
+          <div class="ctrlbtn"></div>
+          <div class="ctrlbtn"></div>
         </div>
       </div>
     </div>

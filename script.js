@@ -51,24 +51,46 @@ window.onclick = function(event) {
 };
 
 //Slideshow
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slideshow #slideshowimg");
+  const ctrlButtons = document.querySelectorAll(".ctrlbtn"); // Add this line
+  let slideIndex = 0;
+  let timer;
 
-let slideIndex = 0;
-const slides = document.querySelectorAll(".slideshow img");
+  function showSlide(index) {
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    slides[index].classList.add("active");
 
-function showSlide(index) {
-  slides.forEach((slide) => {
-    slide.classList.remove("active");
-  });
-  slides[index].classList.add("active");
-}
+    // Update control button opacity (you can customize this part)
+    ctrlButtons.forEach((btn, i) => {
+      btn.style.backgroundColor = i === index ? "black" : "gray"; // Example colors
+    });
+  }
 
-function nextSlide() {
-  slideIndex = (slideIndex + 1) % slides.length;
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(nextSlide, 3000);
+  }
+
+  function startSlideshow() {
+    timer = setInterval(nextSlide, 3000);
+  }
+
+  function stopSlideshow() {
+    clearInterval(timer);
+  }
+
+  // Show the first slide immediately
   showSlide(slideIndex);
-}
 
-function prevSlide() {
-  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-  showSlide(slideIndex);
-}
-setInterval(nextSlide, 5000);
+  // Start the slideshow
+  startSlideshow();
+});
