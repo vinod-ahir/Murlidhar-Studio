@@ -23,7 +23,7 @@
 
   .controls {
     width: 15px;
-    min-height: 70px;
+    height: auto;
     position: absolute;
     z-index: 10;
     display: flex;
@@ -37,6 +37,7 @@
   .ctrlbtn{
     border-radius: 50%;
     opacity: 0.6;
+    margin: 3px 0;
     height: 15px;
     width: 15px;
     cursor: pointer;
