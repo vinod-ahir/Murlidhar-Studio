@@ -20,25 +20,25 @@ document.getElementById("header").addEventListener("click", function () {
 
 //Slideshow
 
-// let slideIndex = 0;
-// const slides = document.querySelectorAll(".slideshow img");
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slideshow img");
 
-// function showSlide(index) {
-//   slides.forEach((slide) => {
-//     slide.classList.remove("active");
-//   });
-//   slides[index].classList.add("active");
-// }
+function showSlide(index) {
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+  slides[index].classList.add("active");
+}
 
-// function nextSlide() {
-//   slideIndex = (slideIndex + 1) % slides.length;
-//   showSlide(slideIndex);
-// }
+function nextSlide() {
+  slideIndex = (slideIndex + 1) % slides.length;
+  showSlide(slideIndex);
+}
 
-// function prevSlide() {
-//   slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-//   showSlide(slideIndex);
-// }
+function prevSlide() {
+  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+  showSlide(slideIndex);
+}
 
-// // Automatic slideshow
-// setInterval(nextSlide, 5000);
+// Automatic slideshow
+setInterval(nextSlide, 5000);
