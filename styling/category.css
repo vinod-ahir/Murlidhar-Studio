@@ -1,3 +1,14 @@
+.c-header{
+  height: 20vh;
+  padding: 6vh 0 0 5vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
 .category-box{
   width: 300px;
 
@@ -12,13 +23,31 @@
   position: relative;
 }
 
+
+.slide-img:hover img {
+  -webkit-filter: none;
+  filter: none;
+  -webkit-transform: scale(1.09,1.09);
+  transform: scale(1.09,1.09);
+  -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease
+}
 .slide-img img{
+  transition: all 0.5s ease;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  -webkit-object-fit: cover; /* added vendor prefix */
+  -moz-object-fit: cover; /* added vendor prefix */
+  -o-object-fit: cover;
+  -ms-object-fit: cover; /* added vendor prefix */
 }
 
-.c-overlay{
+/* .c-overlay{
   position: absolute;
   left: 50%;
   top: 50%;
@@ -29,13 +58,61 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blueviolet;
+  /* background-color: blueviolet; 
+}  */
+
+  .c-slider{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+  }
+
+
+.c-overlay{
+  padding: 30px 15px;
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    text-align: center;
+    z-index: 20;
+    height: auto;
+    box-sizing: border-box;
+    background: -moz-linear-gradient(top,transparent 0,rgba(0,0,0,.1) 2%,rgba(0,0,0,.75) 90%);
+    background: -webkit-linear-gradient(top,transparent 0,rgba(0,0,0,.01) 2%,rgba(0,0,0,.75) 90%);
+    background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,.01) 2%,rgba(0,0,0,.75) 90%)
+
 }
 
-.c-slider{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.c-overlay .category-type{
+  font-family: Tuesday Night;
+  font-size: 32px;
+  color: #fff;
+  line-height: 1em;
+  margin-bottom: 0
+}
+
+.c-overlay .category-type a{
+  margin-right: 5px;
+  position: relative;
+  color: #fff
+}
+.c-overlay .category-type a:last-child {
+  margin-right: 0
+}
+.c-overlay .category-type a:last-child:after {
+  display: none
+}
+.c-overlay h5 a{
+  position: relative;
+  color: #fff;
+  font-size: 17px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.4em
 }

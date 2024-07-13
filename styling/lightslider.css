@@ -92,7 +92,7 @@
     text-indent: -999em;
     width: 8px;
     position: relative;
-    z-index: 99;
+    z-index: 0;
     -webkit-transition: all 0.5s linear 0s;
     transition: all 0.5s linear 0s;
 }
@@ -376,13 +376,13 @@
     position: relative;
 }
 /*/  GRab cursor */
-.lightSlider.lsGrab > * {
+/* .lightSlider.lsGrab > * {
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: -o-grab;
   cursor: -ms-grab;
   cursor: grab;
-}
+} */
 .lightSlider.lsGrabbing > * {
   cursor: move;
   cursor: -webkit-grabbing;

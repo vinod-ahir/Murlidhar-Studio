@@ -1,8 +1,8 @@
 .menu-img{
 
-    width: 25px;
-    padding: 5px;
-    object-fit: contain;
+    width: 80%;
+    height: auto;
+    object-fit: cover;
     transition: opacity 0.1s;    
 }
 
@@ -16,6 +16,9 @@
     z-index: 100;
     cursor: pointer;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav{
@@ -41,6 +44,7 @@
 .nav ul{
     list-style: none;
     text-align: center;
+    padding: 0;
 }
 .nav ul li{
     margin: 20px 0;
