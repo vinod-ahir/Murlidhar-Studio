@@ -10,7 +10,9 @@
 }
 
 .category-box{
-  width: 320px;
+  width: 300px;
+
+  border-radius: 10px;
   overflow: hidden;
   position: relative;
   left: 50%;
@@ -35,11 +37,10 @@
     transition: all 1s ease
 }
 .slide-img img{
-  display: block;
   transition: all 0.5s ease;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   -webkit-object-fit: cover; /* added vendor prefix */
   -moz-object-fit: cover; /* added vendor prefix */
   -o-object-fit: cover;
@@ -68,24 +69,49 @@
   }
 
 
-  .c-overlay{
-    position: absolute;
-    bottom: -2vh;
-    left: 0;
-    right:0;
-    width: 100%;
-    overflow: hidden;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    text-align: center;
-    z-index: 20;
+.c-overlay{
+  padding: 30px 15px;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  /* -webkit-transition: all .3s; */
+  /* transition: all .3s; */
+  text-align: center;
+  /* z-index: 20; */
+  height: auto;
+  box-sizing: border-box;
+  background: -moz-linear-gradient(top,transparent 0,rgba(0,0,0,.1) 2%,rgba(0,0,0,.75) 90%);
+  /* background: -webkit-linear-gradient(top,transparent 0,rgba(0,0,0,.01) 2%,rgba(0,0,0,.75) 90%); */
+  /* background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,.01) 2%,rgba(0,0,0,.75) 90%); */
 }
 
-.slide-img:hover .c-overlay{
-  bottom: 0; 
-  
+.c-overlay .category-type{
+  font-family: Tuesday Night;
+  font-size: 32px;
+  color: #fff;
+  line-height: 1em;
+  margin-bottom: 0
 }
 
 .c-overlay .category-type a{
-  color: rgb(245, 245, 245);
+  margin-right: 5px;
+  position: relative;
+  color: #fff
+}
+.c-overlay .category-type a:last-child {
+  margin-right: 0
+}
+.c-overlay .category-type a:last-child:after {
+  display: none
+}
+.c-overlay h5 a{
+  position: relative;
+  color: #fff;
+  font-size: 17px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.4em
 }
