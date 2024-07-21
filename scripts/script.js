@@ -1,21 +1,18 @@
-
 // Function to toggle the sidebar's active/unactive state
 function toggleSidebar() {
-  var nav = document.getElementById("nav");
-  var menuImg = document.getElementById("menu-img");
-  
+  const nav = document.getElementById("nav");
+  const menuImg = document.getElementById("menu-img");
+
   menuImg.style.opacity = 0;
-  setTimeout(function() {
+  setTimeout(() => {
     if (nav.classList.contains("active")) {
       updateMenuIcon("icons/menu.svg");
-      nav.classList.remove("active");
-      nav.classList.add("unactive");
+      nav.classList.replace("active", "unactive");
     } else {
       updateMenuIcon("icons/cross.svg");
-      nav.classList.remove("unactive");
-      nav.classList.add("active");
+      nav.classList.replace("unactive", "active");
     }
-    setTimeout(function() {
+    setTimeout(() => {
       menuImg.style.opacity = 1;
     }, 100); // Ensuring the image fades back in after the transition
   }, 100);
@@ -23,37 +20,34 @@ function toggleSidebar() {
 
 // Function to update the menu image source
 function updateMenuIcon(src) {
-  var menuImg = document.getElementById("menu-img");
+  const menuImg = document.getElementById("menu-img");
   menuImg.src = src;
 }
 
 // Function to close the sidebar
 function closeSidebar() {
-  var nav = document.getElementById("nav");
+  const nav = document.getElementById("nav");
   if (nav.classList.contains("active")) {
     updateMenuIcon("icons/menu.svg");
-    nav.classList.remove("active");
-    nav.classList.add("unactive");
+    nav.classList.replace("active", "unactive");
   }
 }
 
 // Event listener for header click to toggle sidebar
-document.getElementById("header").addEventListener("click", function(event) {
-  toggleSidebar();
-});
+document.getElementById("header").addEventListener("click", toggleSidebar);
 
 // Event listener for clicks outside the sidebar to close it
-window.onclick = function(event) {
-  var nav = document.getElementById("nav");
-  if (!event.target.closest('#nav') && !event.target.closest('#header')) {
+window.addEventListener("click", (event) => {
+  const nav = document.getElementById("nav");
+  if (!event.target.closest("#nav") && !event.target.closest("#header")) {
     closeSidebar();
   }
-};
+});
 
-//Slideshow
+// Slideshow
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slideshow #slideshowimg");
-  const ctrlButtons = document.querySelectorAll(".ctrlbtn"); // Add this line
+  const ctrlButtons = document.querySelectorAll(".ctrlbtn");
   let slideIndex = 0;
   let timer;
 
@@ -94,39 +88,39 @@ document.addEventListener("DOMContentLoaded", () => {
   // Start the slideshow
   startSlideshow();
 });
-//Category carousel imaage slider
-$(document).ready(function() {
-  $('#responsive').lightSlider({
-      item:4,
-      loop:true,
-      slideMove:1,
-      easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-      speed:600,
-      responsive : [
-        {
-          breakpoint:1300,
-          settings: {
-              item:3,
-              slideMove:1,
-              slideMargin:6,
-            }
+
+// Category carousel image slider
+$(document).ready(() => {
+  $("#responsive").lightSlider({
+    item: 4,
+    loop: true,
+    slideMove: 1,
+    easing: "cubic-bezier(0.25, 0, 0.25, 1)",
+    speed: 600,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          item: 3,
+          slideMove: 1,
+          slideMargin: 6,
+        },
       },
-          {
-              breakpoint:950,
-              settings: {
-                  item:2,
-                  slideMove:1,
-                  slideMargin:6,
-                }
-          },
-          
-          {
-              breakpoint:500,
-              settings: {
-                  item:1,
-                  slideMove:1
-                }
-          }
-      ]
-  });  
+      {
+        breakpoint: 950,
+        settings: {
+          item: 2,
+          slideMove: 1,
+          slideMargin: 6,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          item: 1,
+          slideMove: 1,
+        },
+      },
+    ],
+  });
 });
