@@ -93,10 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
 $(document).ready(() => {
   $("#responsive").lightSlider({
     item: 4,
-    loop: true,
+    loop: false,
     slideMove: 1,
     easing: "cubic-bezier(0.25, 0, 0.25, 1)",
-    speed: 600,
+    speed: 300,
     responsive: [
       {
         breakpoint: 2000,
