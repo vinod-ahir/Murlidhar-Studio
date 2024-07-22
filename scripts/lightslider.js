@@ -664,6 +664,20 @@
                 }
             },
             touchMove: function (endCoords, startCoords) {
+                const xMovement = Math.abs(endCoords.pageX - startCoords.pageX);
+    const yMovement = Math.abs(endCoords.pageY - startCoords.pageY);
+    if (settings.vertical === true) {
+        if (yMovement * 3 > xMovement) {
+            return; // Vertical scroll detected, do nothing
+        }
+        this.move($el, endCoords.pageY - startCoords.pageY);
+    } else {
+        if (xMovement * 3 > yMovement) {
+            return; // Vertical scroll detected, do nothing
+        }
+        this.move($el, endCoords.pageX - startCoords.pageX);
+    }
+
                 $slide.css('transition-duration', '0ms');
                 if (settings.mode === 'slide') {
                     var distance = endCoords - startCoords;
