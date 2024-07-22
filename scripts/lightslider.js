@@ -33,7 +33,7 @@
         currentPagerPosition: 'middle',
         enableTouch: true,
         enableDrag: true,
-        freeMove: true,
+        freeMove: false,
         swipeThreshold: 40,
         responsive: [],
         /* jshint ignore:start */

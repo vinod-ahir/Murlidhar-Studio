@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update control button opacity (you can customize this part)
     ctrlButtons.forEach((btn, i) => {
-      btn.style.backgroundColor = i === index ? "black" : "gray"; // Example colors
+      btn.style.backgroundColor = i === index ? "black" : "rgb(227, 227, 227)"; // Example colors
     });
   }
 

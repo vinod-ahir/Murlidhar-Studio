@@ -15,7 +15,7 @@
 }
 
 .category-box{
-  width: 320px;
+  max-width: 320px;
   overflow: hidden;
   position: relative;
   left: 50%;
