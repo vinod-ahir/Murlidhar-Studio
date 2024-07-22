@@ -664,20 +664,7 @@
                 }
             },
             touchMove: function (endCoords, startCoords) {
-                const xMovement = Math.abs(endCoords.pageX - startCoords.pageX);
-    const yMovement = Math.abs(endCoords.pageY - startCoords.pageY);
-    if (settings.vertical === true) {
-        if (yMovement * 3 > xMovement) {
-            return; // Vertical scroll detected, do nothing
-        }
-        this.move($el, endCoords.pageY - startCoords.pageY);
-    } else {
-        if (xMovement * 3 > yMovement) {
-            return; // Vertical scroll detected, do nothing
-        }
-        this.move($el, endCoords.pageX - startCoords.pageX);
-    }
-
+                var distance = endCoords - startCoords; 
                 $slide.css('transition-duration', '0ms');
                 if (settings.mode === 'slide') {
                     var distance = endCoords - startCoords;
@@ -827,54 +814,43 @@
 
             enableTouch: function () {
                 var $this = this;
+            
                 if (isTouch) {
                     var startCoords = {},
                         endCoords = {};
+            
                     $slide.on('touchstart', function (e) {
-                        endCoords = e.originalEvent.targetTouches[0];
-                        startCoords.pageX = e.originalEvent.targetTouches[0].pageX;
-                        startCoords.pageY = e.originalEvent.targetTouches[0].pageY;
+                        var touch = e.originalEvent.targetTouches[0];
+                        startCoords.pageX = touch.pageX;
+                        startCoords.pageY = touch.pageY;
                         clearInterval(interval);
                     });
+            
                     $slide.on('touchmove', function (e) {
-                        if (w < elSize) {
-                            if (w !== 0) {
-                                return false;
-                            }
-                        }
-                        var orig = e.originalEvent;
-                        endCoords = orig.targetTouches[0];
+                        var touch = e.originalEvent.targetTouches[0];
+                        endCoords.pageX = touch.pageX;
+                        endCoords.pageY = touch.pageY;
+            
                         var xMovement = Math.abs(endCoords.pageX - startCoords.pageX);
                         var yMovement = Math.abs(endCoords.pageY - startCoords.pageY);
-                        if (settings.vertical === true) {
-                            if ((yMovement * 3) > xMovement) {
-                                e.preventDefault();
-                            }
-                            $this.touchMove(endCoords.pageY, startCoords.pageY);
-                        } else {
-                            if ((xMovement * 3) > yMovement) {
-                                e.preventDefault();
-                            }
+            
+                        // Determine if the movement is primarily horizontal
+                        if (xMovement > yMovement) {
+                            // Horizontal movement
+                            e.preventDefault(); // Prevent vertical scrolling
+            
                             $this.touchMove(endCoords.pageX, startCoords.pageX);
                         }
-
+                        // No else block needed here; if it's vertical, do nothing
                     });
+            
                     $slide.on('touchend', function () {
-                        if (w < elSize) {
-                            if (w !== 0) {
-                                return false;
-                            }
-                        }
-                        var distance;
-                        if (settings.vertical === true) {
-                            distance = endCoords.pageY - startCoords.pageY;
-                        } else {
-                            distance = endCoords.pageX - startCoords.pageX;
-                        }
+                        var distance = endCoords.pageX - startCoords.pageX;
                         $this.touchEnd(distance);
                     });
                 }
-            },
+            }
+            ,
             build: function () {
                 var $this = this;
                 $this.initialStyle();
