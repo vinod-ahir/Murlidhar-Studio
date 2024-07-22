@@ -99,7 +99,7 @@ $(document).ready(() => {
     speed: 600,
     responsive: [
       {
-        breakpoint: 1300,
+        breakpoint: 2000,
         settings: {
           item: 3,
           slideMove: 1,
@@ -107,7 +107,7 @@ $(document).ready(() => {
         },
       },
       {
-        breakpoint: 950,
+        breakpoint: 1025,
         settings: {
           item: 2,
           slideMove: 1,
@@ -115,7 +115,7 @@ $(document).ready(() => {
         },
       },
       {
-        breakpoint: 500,
+        breakpoint: 700,
         settings: {
           item: 1,
           slideMove: 1,
