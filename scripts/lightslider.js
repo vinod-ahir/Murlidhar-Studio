@@ -10,10 +10,10 @@
         useCSS: true,
         cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',
         easing: 'linear', //'for jquery animation',//
-        speed: 200, //ms'
+        speed: 150, //ms'
         auto: false,
         pauseOnHover: false,
-        loop: true,
+        loop: false,
         slideEndAnimation: false,
         pause: 2000,
         keyPress: true,
@@ -34,7 +34,7 @@
         enableTouch: true,
         enableDrag: true,
         freeMove: false,
-        swipeThreshold: 70,
+        swipeThreshold: 55,
         responsive: [],
         /* jshint ignore:start */
         onBeforeStart: function ($el) {},
