@@ -53,7 +53,7 @@
   color: white;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 770px) {
   #header {
     display: none;
   }
@@ -62,7 +62,7 @@
     width: 23%;
     position: fixed;
     top: 0;
-    height: 110%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 1);
     z-index: 10;
     display: flex;

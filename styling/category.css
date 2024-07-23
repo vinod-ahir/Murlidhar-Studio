@@ -15,14 +15,15 @@
 }
 
 .category-box{
-  max-width: 320px;
+  width: 90%;
+  height: 60vh;
   overflow: hidden;
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
 }
 .slide-img{
-  height: 450px;
+  height: 100%;
   position: relative;
 }
 
@@ -41,7 +42,6 @@
 }
 .slide-img > img{
   display: block;
-  transition: all 0.5s ease;
   width: 100%;
   height: 100%;
   -webkit-object-fit: cover; /* added vendor prefix */
@@ -61,7 +61,7 @@
 
   .c-overlay {
     position: absolute;
-    bottom: -6vh;
+    bottom: -8vh;
     left: 0;
     right: 0;
     width: 100%;
@@ -100,4 +100,7 @@
   display: block;
   margin: 20px auto;
   width: 24px;;
+}
+.categories{
+background-color: rgb(218, 218, 218);
 }

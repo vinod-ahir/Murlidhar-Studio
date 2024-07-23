@@ -10,7 +10,7 @@
         useCSS: true,
         cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',
         easing: 'linear', //'for jquery animation',//
-        speed: 150, //ms'
+        speed: 200, //ms'
         auto: false,
         pauseOnHover: false,
         loop: false,
@@ -810,47 +810,56 @@
             },
 
 
-
-
             enableTouch: function () {
                 var $this = this;
-            
                 if (isTouch) {
                     var startCoords = {},
                         endCoords = {};
-            
                     $slide.on('touchstart', function (e) {
-                        var touch = e.originalEvent.targetTouches[0];
-                        startCoords.pageX = touch.pageX;
-                        startCoords.pageY = touch.pageY;
+                        endCoords = e.originalEvent.targetTouches[0];
+                        startCoords.pageX = e.originalEvent.targetTouches[0].pageX;
+                        startCoords.pageY = e.originalEvent.targetTouches[0].pageY;
                         clearInterval(interval);
                     });
-            
                     $slide.on('touchmove', function (e) {
-                        var touch = e.originalEvent.targetTouches[0];
-                        endCoords.pageX = touch.pageX;
-                        endCoords.pageY = touch.pageY;
-            
+                        if (w < elSize) {
+                            if (w !== 0) {
+                                return false;
+                            }
+                        }
+                        var orig = e.originalEvent;
+                        endCoords = orig.targetTouches[0];
                         var xMovement = Math.abs(endCoords.pageX - startCoords.pageX);
                         var yMovement = Math.abs(endCoords.pageY - startCoords.pageY);
-            
-                        // Determine if the movement is primarily horizontal
-                        if (xMovement > yMovement) {
-                            // Horizontal movement
-                            e.preventDefault(); // Prevent vertical scrolling
-            
+                        if (settings.vertical === true) {
+                            if ((yMovement * 3) > xMovement) {
+                                e.preventDefault();
+                            }
+                            $this.touchMove(endCoords.pageY, startCoords.pageY);
+                        } else {
+                            if ((xMovement * 3) > yMovement) {
+                                e.preventDefault();
+                            }
                             $this.touchMove(endCoords.pageX, startCoords.pageX);
                         }
-                        // No else block needed here; if it's vertical, do nothing
+
                     });
-            
                     $slide.on('touchend', function () {
-                        var distance = endCoords.pageX - startCoords.pageX;
+                        if (w < elSize) {
+                            if (w !== 0) {
+                                return false;
+                            }
+                        }
+                        var distance;
+                        if (settings.vertical === true) {
+                            distance = endCoords.pageY - startCoords.pageY;
+                        } else {
+                            distance = endCoords.pageX - startCoords.pageX;
+                        }
                         $this.touchEnd(distance);
                     });
                 }
-            }
-            ,
+            },
             build: function () {
                 var $this = this;
                 $this.initialStyle();
@@ -1128,3 +1137,4 @@
         return this;
     };
 }(jQuery));
+
