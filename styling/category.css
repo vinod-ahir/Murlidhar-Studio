@@ -41,6 +41,7 @@
     transition: all 1s ease
 }
 .slide-img > img{
+  
   display: block;
   width: 100%;
   height: 100%;
@@ -49,6 +50,11 @@
   -o-object-fit: cover;
   -ms-object-fit: cover; /* added vendor prefix */
   object-fit: cover;
+  -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
   .c-slider{

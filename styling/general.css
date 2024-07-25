@@ -4,7 +4,21 @@
     text-decoration: none;
 }
 
-body{
-    padding-bottom: 5000px;
+body{   
     background-color: rgb(237, 237, 237);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: #666;
 }
+p{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: #666;
+    margin: 0 0 20px;
+}
+
+
