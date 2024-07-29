@@ -72,9 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    closeBtn.addEventListener('click', () => {
+    function closeGallery() {
         galleryOverlay.style.display = 'none';
-    });
+        // Scroll to the thumbnail of the last viewed image
+        thumbnails[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    closeBtn.addEventListener('click', closeGallery);
 
     prevBtn.addEventListener('click', () => {
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : fullSizeImages.length - 1;
@@ -105,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentIndex = (currentIndex < fullSizeImages.length - 1) ? currentIndex + 1 : 0;
                 galleryImg.src = fullSizeImages[currentIndex];
             } else if (event.key === 'Escape') {
-                galleryOverlay.style.display = 'none';
+                closeGallery();
             }
         }
     });
