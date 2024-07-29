@@ -9,233 +9,320 @@
     <link rel="stylesheet" href="styling/general.css" />
     <link rel="stylesheet" href="styling/slideshow.css" />
     <link rel="stylesheet" href="styling/category.css" />
-    <link rel="stylesheet" href="styling/container-text.css">
+    <link rel="stylesheet" href="styling/container-text.css" />
     <!--Image Slider-->
     <link rel="stylesheet" href="styling/lightslider.css" />
     <script src="scripts/Jquery.js"></script>
     <script src="scripts/lightslider.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header id="header">
       <img id="menu-img" class="menu-img" src="icons/menu.svg" alt="" />
     </header>
     <div class="main-container">
-    <nav id="nav" class="nav unactive">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="main-content">
-    <div class="slideshow">
-      <img src="images/01.jpg" id="slideshowimg" alt="" />
-      <img src="images/02.jpg" id="slideshowimg" alt="" />
-      <img src="images/03.jpg" id="slideshowimg" alt="" />
-      <img src="images/04.jpg" id="slideshowimg" alt="" />
-      <div class="controls">
-        <div class="ctrlbtn"></div>
-        <div class="ctrlbtn"></div>
-        <div class="ctrlbtn"></div>
-        <div class="ctrlbtn"></div>
-      </div>
-    </div>
-    <div class="categories">
-    <div class="c-header">OUR SERVICES</div>
-    <section class="c-slider">
-      <ul id="responsive" class="cs-hidden">
-        <!-- //img 1 -->
-        <li class="item-a">
-          <div class="category-box">
-            <div class="slide-img">
-              <img src="images/img-1.jpg" alt="" />
-              <div class="c-overlay">
-                <span class="category-type">
-                  <a href="#">.weddings</a>
-                </span>
-                <h5>
-                  <a href="#">PHOTOGRAPHY</a>
-                </h5>
-                <a href=""><img src="icons/arrow-right.svg" alt=""></a>
-              </div>
-            </div>
+      <nav id="nav" class="nav unactive">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="main-content">
+        <div class="slideshow">
+          <img src="images/01.jpg" id="slideshowimg" alt="" />
+          <img src="images/02.jpg" id="slideshowimg" alt="" />
+          <img src="images/03.jpg" id="slideshowimg" alt="" />
+          <img src="images/04.jpg" id="slideshowimg" alt="" />
+          <div class="controls">
+            <div class="ctrlbtn"></div>
+            <div class="ctrlbtn"></div>
+            <div class="ctrlbtn"></div>
+            <div class="ctrlbtn"></div>
           </div>
-        </li>
-        <!-- //img 2 -->
-        <li class="item-b">
-          <div class="category-box">
-            <div class="slide-img">
-              <img src="images/img-2.jpg" alt="" />
-              <div class="c-overlay">
-                <span class="category-type">
-                  <a href="#">pre-weddings</a>
-                </span>
-                <h5>
-                  <a href="#">PHOTOGRAPHY</a>
-                </h5>
-                <a href=""><img src="icons/arrow-right.svg" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- //img 3 -->
-        <li class="item-c">
-          <div class="category-box">
-            <div class="slide-img">
-              <img src="images/img-3.jpg" alt="" />
-              <div class="c-overlay">
-                <span class="category-type">
-                  <a href="#">.kids</a>
-                </span>
-                <h5>
-                  <a href="#">PHOTOGRAPHY</a>
-                </h5>
-                <a href=""><img src="icons/arrow-right.svg" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- //img 4 -->
-        <li class="item-d">
-          <div class="category-box">
-            <div class="slide-img">
-              <img src="images/img-4.jpg" alt="" />
-              <div class="c-overlay">
-                <span class="category-type">
-                  <a href="#">.new-born</a>
-                </span>
-                <h5>
-                  <a href="#">PHOTOGRAPHY</a>
-                </h5>
-                <a href=""><img src="icons/arrow-right.svg" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- //img 5 -->
-        <li class="item-e">
-          <div class="category-box">
-            <div class="slide-img">
-              <img src="images/img-5.jpg" alt="" />
-              <div class="c-overlay">
-                <span class="category-type">
-                  <a href="#">.maternity</a>
-                </span>
-                <h5>
-                  <a href="#">PHOTOGRAPHY</a>
-                </h5>
-                <a href=""><img src="icons/arrow-right.svg" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- //img 6 -->
-        <li class="item-f">
-          <div class="category-box">
-            <div class="slide-img">
-              <img src="images/img-6.jpg" alt="" />
-              <div class="c-overlay">
-                <span class="category-type">
-                  <a href="#">.events</a>
-                </span>
-                <h5>
-                  <a href="#">PHOTOGRAPHY</a>
-                </h5>
-                <a href=""><img src="icons/arrow-right.svg" alt=""></a>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </section>
-  </div>
-  <div class="container-text">
-    <h1 class="h2">The Best Wedding Photographer in Kutch - Matrix Studio </h1>
-    <p><strong><em>Photography  - The Art of Freezing the Moments in Camera</em></strong></p>
-    <p>The art of capturing precious moments in the camera is known  as Photography. Ranging from pinhole cameras to Digital Single Lens Reflex  cameras, the art of Photography witnessed immense changes in recent years.  Photography is not about capturing images, but it is about stealing memories  and moments. Although there are many types of Photography, but the known one is  wedding photography. Wedding photography is not just a mastership of  photography, but it reckons the emotions, love, happiness, the rejoicing of the  bride, groom along with their families. It always becomes a moment to cherish  whenever the bride and groom look back at the captured memories. The capturing  of one of the primus events of life is always an art of proficiency and must be  done by the best in the business. </p>
-    <p>
-      <strong><em>Types  of Professional Photography in Jaipur</em></strong><br>
-      <br>
-      Although there are various types of Photography, but the  major types of photography that people quest for are:-
-  </p>
-  <h2>Child  Photography</h2>
-  With the increase in the craze of photography, 
-  <a href="#">Child Photography in Kutch</a>
-  is the new variant of photography available in the market. Although it requires  a lot of stamina, patience, and artistic skill, this new version of photography  can be your favourite mode of photography. It's never easy to make the children  pose as you want. Still, a good Child Photographer knows the perfect way to  extract poses out of childish acts. Matrix Studio is the best Child Photography  Studio in Jaipur that captures the Sweetness and Elvish of your Children in a  click.
-  <p></p>
-  <h2>Maternity Photography</h2>
-  One of the most precious moments in a women's life is  pregnancy. Keeping a little one with you for nine months is always  nerve-wracking and thrilling. But most importantly, it is the sense of  attachment and love that women feel during the whole time span. Capturing these  precious moments for a lifetime is always a dream of women. Thus, 
-  <a href="#">Maternity  Photography in Kutch</a>
-  is not just a photoshoot, it is about reflecting two souls in one  body. Seizing the mother's happiness with the fat belly that includes the soul,  heart, and lifeline of the parents is always illustrious. Thus, one must opt  for the best Maternity Photographer to hold on to your memories forever. Matrix  Studio is the best Maternity Photoshoot Studio in Jaipur that can make your  reel live forever.
-  <p></p>
-  <h2>Pre-wedding Photography</h2>
-  A pre-wedding Photoshoot is the most acceptable way to  reflect the love and bond between couples. It helps in depicting the bond and  love between the upcoming Bride and groom. The love and care for each other are  the perfect ingredients of an excellent
-  <a href="#">Pre-wedding Photography in Kutch</a>
-  . Pre-wedding  Photoshoot always excites the upcoming Bride and groom for their wedding day.  So, it's always better to hire the best Pre-wedding Photographer for preserving  your precious moments. Ending your search for the best Pre-wedding video shoot  in Jaipur with Matrix Studio is always a good idea.
-  <p></p>
-  <h2>Pre-wedding Videography</h2>
-  
-  Very popular nowadays, Pre-wedding Videos are the best way  to reflect your pre-wedding love and bond. It depicts the depth of your bonding  and cares for each other. Pre-wedding videos always excite the upcoming Bride  and groom for their wedding day. Love Story Videos, Romantic Song videos, Concepts Films, and Save the date video are the essential parts of the 
+        </div>
+        <div class="categories">
+          <div class="c-header">OUR SERVICES</div>
+          <section class="c-slider">
+            <ul id="responsive" class="cs-hidden">
+              <!-- //img 1 -->
+              <li class="item-a">
+                <div class="category-box">
+                  <div class="slide-img">
+                    <img src="images/img-1.jpg" alt="" />
+                    <div class="c-overlay">
+                      <span class="category-type">
+                        <a href="wedding.html">.weddings</a>
+                      </span>
+                      <a href="wedding.html">PHOTOGRAPHY</a>
+                      <a href="wedding.html"><img src="icons/arrow-right.svg" alt="" /></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- //img 2 -->
+              <li class="item-b">
+                <div class="category-box">
+                  <div class="slide-img">
+                    <img src="images/img-2.jpg" alt="" />
+                    <div class="c-overlay">
+                      <span class="category-type">
+                        <a href="#">pre-weddings</a>
+                      </span>
+                        <a href="#">PHOTOGRAPHY</a>
+                      <a href=""><img src="icons/arrow-right.svg" alt="" /></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- //img 3 -->
+              <li class="item-c">
+                <div class="category-box">
+                  <div class="slide-img">
+                    <img src="images/img-3.jpg" alt="" />
+                    <div class="c-overlay">
+                      <span class="category-type">
+                        <a href="#">.kids</a>
+                      </span>
+                        <a href="#">PHOTOGRAPHY</a>
+                      <a href=""><img src="icons/arrow-right.svg" alt="" /></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- //img 4 -->
+              <li class="item-d">
+                <div class="category-box">
+                  <div class="slide-img">
+                    <img src="images/img-4.jpg" alt="" />
+                    <div class="c-overlay">
+                      <span class="category-type">
+                        <a href="#">.new-born</a>
+                      </span>
+                        <a href="#">PHOTOGRAPHY</a>
+                      <a href=""><img src="icons/arrow-right.svg" alt="" /></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- //img 5 -->
+              <li class="item-e">
+                <div class="category-box">
+                  <div class="slide-img">
+                    <img src="images/img-5.jpg" alt="" />
+                    <div class="c-overlay">
+                      <span class="category-type">
+                        <a href="#">.maternity</a>
+                      </span>
+                        <a href="#">PHOTOGRAPHY</a>
+                      <a href=""><img src="icons/arrow-right.svg" alt="" /></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- //img 6 -->
+              <li class="item-f">
+                <div class="category-box">
+                  <div class="slide-img">
+                    <img src="images/img-6.jpg" alt="" />
+                    <div class="c-overlay">
+                      <span class="category-type">
+                        <a href="#">.events</a>
+                      </span>
+                        <a href="#">PHOTOGRAPHY</a>
+                      <a href=""><img src="icons/arrow-right.svg" alt="" /></a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="container-text">
+          <h1 class="h2">
+            The Best Wedding Photographer in Kutch - Matrix Studio
+          </h1>
+          <p>
+            <strong
+              ><em
+                >Photography - The Art of Freezing the Moments in Camera</em
+              ></strong
+            >
+          </p>
+          <p>
+            The art of capturing precious moments in the camera is known as
+            Photography. Ranging from pinhole cameras to Digital Single Lens
+            Reflex cameras, the art of Photography witnessed immense changes in
+            recent years. Photography is not about capturing images, but it is
+            about stealing memories and moments. Although there are many types
+            of Photography, but the known one is wedding photography. Wedding
+            photography is not just a mastership of photography, but it reckons
+            the emotions, love, happiness, the rejoicing of the bride, groom
+            along with their families. It always becomes a moment to cherish
+            whenever the bride and groom look back at the captured memories. The
+            capturing of one of the primus events of life is always an art of
+            proficiency and must be done by the best in the business.
+          </p>
+          <p>
+            <strong><em>Types of Professional Photography in Jaipur</em></strong
+            ><br />
+            <br />
+            Although there are various types of Photography, but the major types
+            of photography that people quest for are:-
+          </p>
+          <h2>Child Photography</h2>
+          With the increase in the craze of photography,
+          <a href="#">Child Photography in Kutch</a>
+          is the new variant of photography available in the market. Although it
+          requires a lot of stamina, patience, and artistic skill, this new
+          version of photography can be your favourite mode of photography. It's
+          never easy to make the children pose as you want. Still, a good Child
+          Photographer knows the perfect way to extract poses out of childish
+          acts. Matrix Studio is the best Child Photography Studio in Jaipur
+          that captures the Sweetness and Elvish of your Children in a click.
+          <p></p>
+          <h2>Maternity Photography</h2>
+          One of the most precious moments in a women's life is pregnancy.
+          Keeping a little one with you for nine months is always nerve-wracking
+          and thrilling. But most importantly, it is the sense of attachment and
+          love that women feel during the whole time span. Capturing these
+          precious moments for a lifetime is always a dream of women. Thus,
+          <a href="#">Maternity Photography in Kutch</a>
+          is not just a photoshoot, it is about reflecting two souls in one
+          body. Seizing the mother's happiness with the fat belly that includes
+          the soul, heart, and lifeline of the parents is always illustrious.
+          Thus, one must opt for the best Maternity Photographer to hold on to
+          your memories forever. Matrix Studio is the best Maternity Photoshoot
+          Studio in Jaipur that can make your reel live forever.
+          <p></p>
+          <h2>Pre-wedding Photography</h2>
+          A pre-wedding Photoshoot is the most acceptable way to reflect the
+          love and bond between couples. It helps in depicting the bond and love
+          between the upcoming Bride and groom. The love and care for each other
+          are the perfect ingredients of an excellent
+          <a href="#">Pre-wedding Photography in Kutch</a>
+          . Pre-wedding Photoshoot always excites the upcoming Bride and groom
+          for their wedding day. So, it's always better to hire the best
+          Pre-wedding Photographer for preserving your precious moments. Ending
+          your search for the best Pre-wedding video shoot in Jaipur with Matrix
+          Studio is always a good idea.
+          <p></p>
+          <h2>Pre-wedding Videography</h2>
 
-  <a href="#">pre-wedding video Kutch</a>
-  . Matrix Studio is the best Pre-wedding video shoot in Jaipur.
-  <p></p>
-  <h2>Wedding Photography</h2>
-  <p>Wedding photography is not just a mastership of photography,  but it reckons the emotions, love, happiness, and rejoicing of the bride,  groom, and families. It always becomes a moment to cherish whenever the bride  and groom look back at the captured memories. The capturing of one of the  primus events of life is always an art of proficiency and must be done by the  best in the business. Matrix Studio, as the Best <a href="https://matrixstudio.in/wedding-photography">Wedding Photographer in Jaipur</a>, is the most preferred choice of all Jaipurites.</p>
-  <h3>Matrix Studio - A team of Passionate Photographers</h3>
-  
-  Matrix Studio is a Jaipur based Photography Studio rendering  its services for decades. Matrix Studio with vast years of experience and  uncountable wedding photoshoots is always an optimal choice for capturing your  crucial moments. Matrix Studio with the team of best wedding photographers and  videographers seizes the scenic moments that will surely forge you to fall in  love again. Our Photography work is Bright, Bold, and Beautiful as we always  try to maintain a strong bond with our clients. This helps in providing a  mesmerizing Photographic experience for our clients as well as for us also. Our  experienced team also travels between the city and destinations as per the photoshoot  locations selected by our clients. We are experienced in destination shoots in  the famous locations of Rajasthan as well as nearby areas too. 
-  <br>
-  <br>
-  <strong>Matrix Studio</strong>
-  offers various services like Cinematography, 
-  <strong>Candid Photography</strong>
-  ,   
-  <strong>Wedding Photography</strong>
-  , 
-  <strong>Pre-wedding Photoshoots</strong>
-  , <strong>Portfolio  Photoshoots</strong>
-  , 
-  <strong>Maternity Photoshoot</strong>
-  , 
-  <strong>Destination Photography</strong>
-  , etc with par  excellence.
-    
-  <p>
-    <strong><em>Aim &amp; Objectives of Matrix Studio</em></strong><br>
-    <br>
-    Matrix Studio was instituted with an aim to provide the  clients with spectacular images that depict the moments in such a way so that  one can relish the moments again by opening the images. From the inquiry to the  final delivery of the photos, our production team and photographers co-ordinate  to provide the excellence in photography that skyrockets on the expectation of  our clients. Apart from any other Photography studio in Jaipur or wedding  Photographers in Jaipur, we bring our new ideas and artistic vision to the  photography business. This makes us stand apart from the bunch of various  Photographers in India.
-</p>
-  <h4>So stop your search with Matrix Studio as the best wedding photographer in  India!!!</h4></div>
-  <div class="footer">
-    <div class="footer-narrow">
-      <div class="footer-div">
-        <span><a href="#">Murlidhar Studio</a></span>
-        <div class="sm-handle">
-          <a href="https://www.facebook.com/murlidharstudio" target="_blank">FA</a>
-          <a href="https://www.instagram.com/murlidharstudio/" target="_blank">IN</a>
+          Very popular nowadays, Pre-wedding Videos are the best way to reflect
+          your pre-wedding love and bond. It depicts the depth of your bonding
+          and cares for each other. Pre-wedding videos always excite the
+          upcoming Bride and groom for their wedding day. Love Story Videos,
+          Romantic Song videos, Concepts Films, and Save the date video are the
+          essential parts of the
 
+          <a href="#">pre-wedding video Kutch</a>
+          . Matrix Studio is the best Pre-wedding video shoot in Jaipur.
+          <p></p>
+          <h2>Wedding Photography</h2>
+          <p>
+            Wedding photography is not just a mastership of photography, but it
+            reckons the emotions, love, happiness, and rejoicing of the bride,
+            groom, and families. It always becomes a moment to cherish whenever
+            the bride and groom look back at the captured memories. The
+            capturing of one of the primus events of life is always an art of
+            proficiency and must be done by the best in the business. Matrix
+            Studio, as the Best
+            <a href="https://matrixstudio.in/wedding-photography"
+              >Wedding Photographer in Jaipur</a
+            >, is the most preferred choice of all Jaipurites.
+          </p>
+          <h3>Matrix Studio - A team of Passionate Photographers</h3>
+
+          Matrix Studio is a Jaipur based Photography Studio rendering its
+          services for decades. Matrix Studio with vast years of experience and
+          uncountable wedding photoshoots is always an optimal choice for
+          capturing your crucial moments. Matrix Studio with the team of best
+          wedding photographers and videographers seizes the scenic moments that
+          will surely forge you to fall in love again. Our Photography work is
+          Bright, Bold, and Beautiful as we always try to maintain a strong bond
+          with our clients. This helps in providing a mesmerizing Photographic
+          experience for our clients as well as for us also. Our experienced
+          team also travels between the city and destinations as per the
+          photoshoot locations selected by our clients. We are experienced in
+          destination shoots in the famous locations of Rajasthan as well as
+          nearby areas too.
+          <br />
+          <br />
+          <strong>Matrix Studio</strong>
+          offers various services like Cinematography,
+          <strong>Candid Photography</strong>
+          ,
+          <strong>Wedding Photography</strong>
+          ,
+          <strong>Pre-wedding Photoshoots</strong>
+          , <strong>Portfolio Photoshoots</strong>
+          ,
+          <strong>Maternity Photoshoot</strong>
+          ,
+          <strong>Destination Photography</strong>
+          , etc with par excellence.
+
+          <p>
+            <strong><em>Aim &amp; Objectives of Matrix Studio</em></strong
+            ><br />
+            <br />
+            Matrix Studio was instituted with an aim to provide the clients with
+            spectacular images that depict the moments in such a way so that one
+            can relish the moments again by opening the images. From the inquiry
+            to the final delivery of the photos, our production team and
+            photographers co-ordinate to provide the excellence in photography
+            that skyrockets on the expectation of our clients. Apart from any
+            other Photography studio in Jaipur or wedding Photographers in
+            Jaipur, we bring our new ideas and artistic vision to the
+            photography business. This makes us stand apart from the bunch of
+            various Photographers in India.
+          </p>
+          <h4>
+            So stop your search with Matrix Studio as the best wedding
+            photographer in India!!!
+          </h4>
+        </div>
+        <div class="footer">
+          <div class="footer-narrow">
+            <div class="footer-div">
+              <span><a href="#">Murlidhar Studio</a></span>
+              <div class="sm-handle">
+                <a
+                  href="https://www.facebook.com/murlidharstudio"
+                  target="_blank"
+                  >FA</a
+                >
+                <a
+                  href="https://www.instagram.com/murlidharstudio/"
+                  target="_blank"
+                  >IN</a
+                >
+              </div>
+            </div>
+            <div class="footer-div">
+              <h6>RING</h6>
+              <p>+91 9979912805</p>
+              <h6>WRITE</h6>
+              <p>murlidharstudio@gmail.com</p>
+            </div>
+            <div class="footer-div">
+              <h6>ADDRESS</h6>
+              <p>
+                B-16/1, Gandhi Path, Vaishali Nagar,Jaipur, Rajasthan, INDIA.
+                302021
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="footer-div">
-        <h6>RING</h6>
-        <p>+91 9979912805</p>
-        <h6>WRITE
-        </h6>
-        <p>murlidharstudio@gmail.com</p>
-      </div>
-      <div class="footer-div">
-        <h6>ADDRESS</h6>
-        <p>B-16/1, Gandhi Path, Vaishali Nagar,Jaipur, Rajasthan, INDIA. 302021</p>
-      </div>
     </div>
-  </div>
-</div>
-</div>
     <script src="scripts/script.js"></script>
   </body>
 </html>

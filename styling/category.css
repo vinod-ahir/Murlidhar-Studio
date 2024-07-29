@@ -87,19 +87,20 @@
   font-family: "Love Light", cursive;
   font-weight: normal;
   font-style: normal;
-  margin-bottom: -7px; /* changed to shorthand margin property */
+  margin-bottom: -2px; /* changed to shorthand margin property */
   font-size: 32px;
-  display: inline-block; /* added to make element respect top and bottom margins */
+  display: block; /* added to make element respect top and bottom margins */
 }
 
-.c-overlay h5 > a{
+.c-overlay > a{
+  display: block;
   font-family: "Josefin Sans", sans-serif;
   text-decoration: none;
   color: white;
   font-size: 20px;
   font-weight: normal; /* changed to standard font weight */
   font-style: normal;
-  display: inline-block; /* added to make element respect top and bottom margins */
+  display: block; /* added to make element respect top and bottom margins */
 }
 
 .c-overlay a > img{

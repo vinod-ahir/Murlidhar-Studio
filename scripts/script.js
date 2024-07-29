@@ -109,53 +109,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Category carousel image slider
-$(document).ready(() => {
-  $("#responsive").lightSlider({
-    item: 4,
-    loop: false,
-    slideMove: 4,
-    easing: "cubic-bezier(0.25, 0, 0.25, 1)",
-    speed: 300,
-    responsive: [
-      {
-        breakpoint: 2000,
-        settings: {
-          item: 3,
-          slideMove: 3,
-          slideMargin: 6,
-        },
-      },
-      {
-        breakpoint: 1250,
-        settings: {
-          item: 3,
-          slideMove: 3,
-          slideMargin: 6,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          item: 2,
-          slideMove: 2,
-          slideMargin: 6,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          item: 2,
-          slideMove: 2,
-          slideMargin: 6,
-        },
-      },
-      {
-        breakpoint: 450,
-        settings: {
-          item: 1,
-          slideMove: 1,
-        },
-      },
-    ],
-  });
+$(document).ready(function() {
+  $('#responsive').lightSlider({
+      item:3,
+      slideMove:3,
+      easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+      speed:400,
+      responsive : [
+          {
+              breakpoint:1024,
+              settings: {
+                  item:2,
+                  slideMove:2,
+                  slideMargin:6,
+                }
+          },
+          {
+              breakpoint:480,
+              settings: {
+                  item:1,
+                  slideMove:1
+                }
+          }
+      ]
+  });  
 });

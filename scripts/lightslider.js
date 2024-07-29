@@ -3,18 +3,18 @@
     var defaults = {
         item: 3,
         autoWidth: false,
-        slideMove: 2,
+        slideMove: 1,
         slideMargin: 10,
         addClass: '',
         mode: 'slide',
         useCSS: true,
         cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',
         easing: 'linear', //'for jquery animation',//
-        speed: 200, //ms'
+        speed: 400, //ms'
         auto: false,
         pauseOnHover: false,
         loop: false,
-        slideEndAnimation: false,
+        slideEndAnimation: true,
         pause: 2000,
         keyPress: true,
         controls: false,
@@ -28,13 +28,13 @@
         thumbItem: 10,
         pager: true,
         gallery: false,
-        galleryMargin: 10,
+        galleryMargin: 5,
         thumbMargin: 5,
         currentPagerPosition: 'middle',
         enableTouch: true,
         enableDrag: true,
         freeMove: false,
-        swipeThreshold: 55,
+        swipeThreshold: 40,
         responsive: [],
         /* jshint ignore:start */
         onBeforeStart: function ($el) {},
@@ -664,7 +664,6 @@
                 }
             },
             touchMove: function (endCoords, startCoords) {
-                var distance = endCoords - startCoords; 
                 $slide.css('transition-duration', '0ms');
                 if (settings.mode === 'slide') {
                     var distance = endCoords - startCoords;
@@ -808,6 +807,8 @@
                     });
                 }
             },
+
+
 
 
             enableTouch: function () {
@@ -1137,4 +1138,3 @@
         return this;
     };
 }(jQuery));
-

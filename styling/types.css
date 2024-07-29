@@ -1,0 +1,33 @@
+.banner-head{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.heading-meta{
+    display: block;
+    position: relative;
+    font-family: "Love Light", cursive;
+    font-size: 35px;
+    color: #adadad;
+    margin-bottom: -4px;
+}
+.banner-heading{
+    line-height: 1.2rem;
+    color: #000;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.container-fluid{
+    padding: 0 30px 0 30px;
+}
+.banner-info{
+
+}
