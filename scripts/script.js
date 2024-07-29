@@ -105,9 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
-
 // Category carousel image slider
 $(document).ready(function() {
   $('#responsive').lightSlider({
@@ -134,3 +131,4 @@ $(document).ready(function() {
       ]
   });  
 });
+

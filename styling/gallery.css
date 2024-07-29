@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    position: relative;
+}
+
+.gallery-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.gallery-overlay img {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.thumbnails img {
+    cursor: pointer;
+    margin: 5px;
+    width: 100px;
+    height: auto;
+}
+
+.close-btn, .prev-btn, .next-btn, .zoom-btn {
+    position: absolute;
+    background: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1100;
+}
+
+.close-btn {
+    top: 10px;
+    right: 10px;
+}
+
+.prev-btn {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next-btn {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.zoom-btn {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thumbnails {
+    display: grid;
+    gap: 10px; /* Adjust as needed */
+}
+
+.thumbnails img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+    .thumbnails {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .thumbnails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .thumbnails {
+        grid-template-columns: 1fr;
+    }
+}
