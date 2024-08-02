@@ -1,24 +1,19 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 .gallery {
     position: relative;
 }
 
 .gallery-overlay {
-    display: none; /* Hidden by default */
+    display: none; 
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
+    background: rgba(32, 32, 32, 0.95);
     z-index: 1000;
+    transition: all 1000ms ease;
 }
 
 .gallery-overlay img {
@@ -28,10 +23,14 @@ body {
 
 .thumbnails img {
     cursor: pointer;
-    width: 100px;
+    width: 100%;
     height: auto;
+    object-fit: cover;
+    transition: transform 100ms ease, opacity 100ms ease;
 }
-
+.thumbnails img:hover {
+    filter: brightness(0.7);
+}
 .close-btn, .prev-btn, .next-btn, .zoom-btn {
     position: absolute;
     background: white;
@@ -67,7 +66,7 @@ body {
 
 .thumbnails {
     display: grid;
-    gap: 10px; /* Adjust as needed */
+    gap: 13px; /* Adjust as needed */
 }
 
 .thumbnails img {
