@@ -28,4 +28,6 @@ a:-webkit-any-link {
     color: unset;
 }
 
-
+body.no-scroll {
+    overflow: hidden;
+  }
