@@ -97,11 +97,11 @@
 }}
 
 .logo{
-  margin: 10px 0;
+  margin: 25px 0;
   text-align: center;
 }
 .logo img{
-  max-width: 320px;
+  max-width: 160px;
 }
 .separator {
   width: 16%;
