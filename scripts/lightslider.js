@@ -347,11 +347,9 @@
                     for (i = 0; i < length; i++) {
                         if (settings.mode === 'slide') {
                             // calculate scene * slide value
-                            if (!settings.autoWidth) {
-                                v = i * ((slideWidth + settings.slideMargin) * settings.slideMove);
-                            } else {
+
                                 v += ((parseInt($children.eq(i).width()) + settings.slideMargin) * settings.slideMove);
-                            }
+                            
                         }
                         var thumb = $children.eq(i * settings.slideMove).attr('data-thumb');
                         if (settings.gallery === true) {

@@ -81,8 +81,8 @@
     display: flex;
   }
   .main-content {
-    margin-left: 23%;
-    width: 77%;
+    margin-left: 30%;
+    width: 70%;
     overflow: auto;
   }
 }
@@ -90,7 +90,10 @@
   .nav{
       width: 23%;
   }
-}
+  .main-content {
+    margin-left: 23%;
+    width: 77%;
+}}
 
 .logo{
   text-align: center;
