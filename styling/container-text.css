@@ -36,18 +36,6 @@ b,strong{
 
 
 
-/* Social media handles */
-
-/* body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 100vh; 
-    background-color: #f0f0f0;
-}  */
-
 .footer {
     width: auto; /* Container width */
     max-width: 1200px; /* Max width for large screens */
@@ -79,4 +67,10 @@ b,strong{
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
+}
+
+.s-name{
+    font-size: 19px !important;
+    color: #a2783a;;
+    margin: 0 0 10px;    
 }

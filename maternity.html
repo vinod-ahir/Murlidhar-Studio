@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA_Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styling/menu.css" />
+    <link rel="stylesheet" href="styling/general.css" />
+    <link rel="stylesheet" href="styling/container-text.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styling/types.css" />
+    <link rel="stylesheet" href="styling/gallery.css">
+    <script src="scripts/galleries.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <img id="menu-img" class="menu-img" src="icons/menu.svg" alt="" />
+    </header>
+    <div class="main-container">
+      <nav id="nav" class="nav unactive">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="main-content">
+        <div class="banner-head">
+          <span class="heading-meta">Our works</span>
+          <h2 class="banner-heading">
+            Maternity Photography
+          </h2>
+        </div>
+        <div class="container-fluid">
+          <div class="banner-info">
+            <p></p>
+            <p>
+              <b><em>Wedding Photography - Seize your Unpriced Moments with a click!!!</em></b><br>
+              <br>
+              Wedding photography is not just a mastership of photography, but it reckons the emotions, love, happiness, and rejoicing of the bride, groom, and families. It always becomes a moment to cherish whenever the bride and groom look back at the captured memories. The capturing of one of the primus events of life is always an art of proficiency and must be done by the best in the business. Matrix Studio, as the <strong>Best Wedding Photographer in Jaipur</strong>, is the most preferred choice of all Jaipurites.</p>
+              <p></p>
+          </div>
+
+
+
+          <!--galleryyy-->
+          <div id="gallery" class="gallery">
+            <div class="gallery-overlay" id="gallery-overlay">
+                <button class="close-btn" id="close-btn">×</button>
+                <button class="prev-btn" id="prev-btn">‹</button>
+                <button class="next-btn" id="next-btn">›</button>
+                <button class="zoom-btn" id="zoom-btn">🔍</button>
+                <img id="gallery-img" src="" alt="Gallery Image">
+            </div>
+            <div class="thumbnails">
+                <!-- Thumbnails here -->
+                  <img src="images/cropp/01.png" data-full="images/cropp/01.png" alt="Thumbnail 01">
+                  <img src="images/cropp/02.png" data-full="images/cropp/02.png" alt="Thumbnail 02">
+                  <img src="images/cropp/03.png" data-full="images/cropp/03.png" alt="Thumbnail 03">
+                  <img src="images/cropp/04.png" data-full="images/cropp/04.png" alt="Thumbnail 04">
+                  <img src="images/cropp/img-1.png" data-full="images/cropp/img-1.png" alt="Thumbnail 05">
+                  <img src="images/cropp/img-2.png" data-full="images/cropp/img-2.png" alt="Thumbnail 06">
+                  <img src="images/cropp/img-3.png" data-full="images/cropp/img-3.png" alt="Thumbnail 07">
+                  <img src="images/cropp/img-4.png" data-full="images/cropp/img-4.png" alt="Thumbnail 08">
+                  <img src="images/cropp/img-5.png" data-full="images/cropp/img-5.png" alt="Thumbnail 09">
+              
+                
+                <!-- Add more thumbnails -->
+            </div>
+        </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

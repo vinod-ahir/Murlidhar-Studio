@@ -34,7 +34,7 @@
         enableTouch: true,
         enableDrag: true,
         freeMove: false,
-        swipeThreshold: 40,
+        swipeThreshold: 50,
         responsive: [],
         /* jshint ignore:start */
         onBeforeStart: function ($el) {},
