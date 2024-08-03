@@ -36,7 +36,7 @@ function closeSidebar() {
 // Event listener for header click to toggle sidebar
 document.getElementById("header").addEventListener("click", toggleSidebar);
 
-// Event listener for clicks outside the sidebar to close it
+// Close sidebar when clicking outside of nav and header
 window.addEventListener("click", (event) => {
   const nav = document.getElementById("nav");
   if (!event.target.closest("#nav") && !event.target.closest("#header")) {
@@ -44,6 +44,29 @@ window.addEventListener("click", (event) => {
   }
 });
 
+// Close sidebar when scrolling while nav is open
+window.addEventListener("scroll", () => {
+  const nav = document.getElementById("nav");
+  if (nav.classList.contains("open")) {
+    closeSidebar();
+  }
+});
+
+// Close sidebar on touch outside of nav in touch devices
+document.addEventListener("touchstart", (event) => {
+  const nav = document.getElementById("nav");
+  if (!event.target.closest("#nav") && !event.target.closest("#header")) {
+    closeSidebar();
+  }
+});
+
+// Close sidebar on scroll outside of nav in touch devices
+document.addEventListener("touchmove", (event) => {
+  const nav = document.getElementById("nav");
+  if (!event.target.closest("#nav") && !event.target.closest("#header")) {
+    closeSidebar();
+  }
+});
 // Slideshow
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slideshow #slideshowimg");
